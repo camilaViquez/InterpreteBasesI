@@ -11,7 +11,7 @@ Module Module1
 
     Sub abrirConexion()
         Try
-            cn = New SqlConnection("Data Source=MATILDA;Initial Catalog=Ventas;Integrated Security=True")
+            cn = New SqlConnection("Data Source=LEO;Initial Catalog=Ventas;Integrated Security=True")
             cn.Open()
             MessageBox.Show("Se realizo la coneccion con exito")
 
@@ -71,5 +71,20 @@ Module Module1
         End Try
 
     End Sub
+
+
+    Public Sub llenarDatagridviewUnion(ByVal dgv As DataGridView, ByVal parametrosU As String)
+        Try
+            adaptador = New SqlDataAdapter(parametrosU, cn)
+            dt = New DataTable
+            adaptador.Fill(dt)
+            dgv.DataSource = dt
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
 
 End Module
