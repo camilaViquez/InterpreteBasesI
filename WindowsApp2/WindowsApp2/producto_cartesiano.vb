@@ -21,12 +21,19 @@
         existe = consultarExistencia(nombre_tabla1)
         existe2 = consultarExistencia(Nombre_tabla2)
 
+        If existe = False Then
+            MessageBox.Show("No existe la tabla " + nombre_tabla1)
+        End If
 
+        If existe2 = False Then
+            MessageBox.Show("No existe la tabla " + Nombre_tabla2)
+        End If
 
         If existe And existe2 Then
             llenarDatagridviewCartesiano(DataGridView2, valores)
         Else
-            MessageBox.Show("No existe la tabla")
+
+
         End If
 
     End Sub
