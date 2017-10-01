@@ -28,8 +28,8 @@ Partial Class Form1
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.p1 = New System.Windows.Forms.TextBox()
-        Me.p = New System.Windows.Forms.TextBox()
+        Me.nAtributos = New System.Windows.Forms.TextBox()
+        Me.ntabla = New System.Windows.Forms.TextBox()
         Me.SQL_Label = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -43,6 +43,7 @@ Partial Class Form1
         Me.CantonesTableAdapter = New WindowsApp2.VentasDataSetTableAdapters.cantonesTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.VentasDataSetTableAdapters.TableAdapterManager()
         Me.FacturasTableAdapter1 = New WindowsApp2.VentasDataSetTableAdapters.facturasTableAdapter()
+        Me.pruebatexto = New System.Windows.Forms.Label()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.Consulta_SQL.SuspendLayout()
@@ -95,19 +96,19 @@ Partial Class Form1
         Me.DataGridView2.Size = New System.Drawing.Size(287, 199)
         Me.DataGridView2.TabIndex = 2
         '
-        'p1
+        'nAtributos
         '
-        Me.p1.Location = New System.Drawing.Point(19, 122)
-        Me.p1.Name = "p1"
-        Me.p1.Size = New System.Drawing.Size(118, 20)
-        Me.p1.TabIndex = 3
+        Me.nAtributos.Location = New System.Drawing.Point(19, 122)
+        Me.nAtributos.Name = "nAtributos"
+        Me.nAtributos.Size = New System.Drawing.Size(118, 20)
+        Me.nAtributos.TabIndex = 3
         '
-        'p
+        'ntabla
         '
-        Me.p.Location = New System.Drawing.Point(19, 59)
-        Me.p.Name = "p"
-        Me.p.Size = New System.Drawing.Size(118, 20)
-        Me.p.TabIndex = 6
+        Me.ntabla.Location = New System.Drawing.Point(19, 59)
+        Me.ntabla.Name = "ntabla"
+        Me.ntabla.Size = New System.Drawing.Size(118, 20)
+        Me.ntabla.TabIndex = 6
         '
         'SQL_Label
         '
@@ -123,8 +124,8 @@ Partial Class Form1
         '
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.p)
-        Me.GroupBox1.Controls.Add(Me.p1)
+        Me.GroupBox1.Controls.Add(Me.ntabla)
+        Me.GroupBox1.Controls.Add(Me.nAtributos)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 17)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(181, 194)
@@ -220,11 +221,21 @@ Partial Class Form1
         '
         Me.FacturasTableAdapter1.ClearBeforeFill = True
         '
+        'pruebatexto
+        '
+        Me.pruebatexto.AutoSize = True
+        Me.pruebatexto.Location = New System.Drawing.Point(287, 351)
+        Me.pruebatexto.Name = "pruebatexto"
+        Me.pruebatexto.Size = New System.Drawing.Size(39, 13)
+        Me.pruebatexto.TabIndex = 12
+        Me.pruebatexto.Text = "Label1"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(623, 442)
+        Me.Controls.Add(Me.pruebatexto)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Algebra_Relacional)
         Me.Controls.Add(Me.Consulta_SQL)
@@ -243,6 +254,7 @@ Partial Class Form1
         CType(Me.CantonesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VentasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -253,8 +265,8 @@ Partial Class Form1
     Friend WithEvents TableAdapterManager As VentasDataSetTableAdapters.TableAdapterManager
     Friend WithEvents FacturasTableAdapter1 As VentasDataSetTableAdapters.facturasTableAdapter
     Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents p1 As TextBox
-    Friend WithEvents p As TextBox
+    Friend WithEvents nAtributos As TextBox
+    Friend WithEvents ntabla As TextBox
     Friend WithEvents SQL_Label As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label2 As Label
@@ -263,4 +275,5 @@ Partial Class Form1
     Friend WithEvents Algebra_Relacional As GroupBox
     Friend WithEvents Algebra_label As Label
     Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents pruebatexto As Label
 End Class

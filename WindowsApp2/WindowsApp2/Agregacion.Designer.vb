@@ -34,15 +34,14 @@ Partial Class Agregacion
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.resultado = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.p = New System.Windows.Forms.TextBox()
-        Me.p1 = New System.Windows.Forms.TextBox()
+        Me.nombre_tabla = New System.Windows.Forms.TextBox()
+        Me.operaciones = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Algebra_Relacional.SuspendLayout()
-        Me.Consulta_SQL.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -112,10 +111,9 @@ Partial Class Agregacion
         '
         'Consulta_SQL
         '
-        Me.Consulta_SQL.Controls.Add(Me.SQL_Label)
         Me.Consulta_SQL.Location = New System.Drawing.Point(32, 331)
         Me.Consulta_SQL.Name = "Consulta_SQL"
-        Me.Consulta_SQL.Size = New System.Drawing.Size(200, 69)
+        Me.Consulta_SQL.Size = New System.Drawing.Size(200, 26)
         Me.Consulta_SQL.TabIndex = 24
         Me.Consulta_SQL.TabStop = False
         Me.Consulta_SQL.Text = "Consulta_SQL"
@@ -123,7 +121,7 @@ Partial Class Agregacion
         'SQL_Label
         '
         Me.SQL_Label.AutoSize = True
-        Me.SQL_Label.Location = New System.Drawing.Point(27, 33)
+        Me.SQL_Label.Location = New System.Drawing.Point(35, 370)
         Me.SQL_Label.MaximumSize = New System.Drawing.Size(388, 80)
         Me.SQL_Label.MinimumSize = New System.Drawing.Size(3, 5)
         Me.SQL_Label.Name = "SQL_Label"
@@ -134,10 +132,10 @@ Partial Class Agregacion
         '
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.resultado)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.p)
-        Me.GroupBox1.Controls.Add(Me.p1)
+        Me.GroupBox1.Controls.Add(Me.nombre_tabla)
+        Me.GroupBox1.Controls.Add(Me.operaciones)
         Me.GroupBox1.Location = New System.Drawing.Point(32, 35)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(181, 280)
@@ -163,12 +161,12 @@ Partial Class Agregacion
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "Operaciones"
         '
-        'TextBox1
+        'resultado
         '
-        Me.TextBox1.Location = New System.Drawing.Point(6, 180)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox1.TabIndex = 17
+        Me.resultado.Location = New System.Drawing.Point(6, 180)
+        Me.resultado.Name = "resultado"
+        Me.resultado.Size = New System.Drawing.Size(149, 20)
+        Me.resultado.TabIndex = 17
         '
         'Label2
         '
@@ -179,19 +177,19 @@ Partial Class Agregacion
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "Nombre de la Tabla I"
         '
-        'p
+        'nombre_tabla
         '
-        Me.p.Location = New System.Drawing.Point(9, 59)
-        Me.p.Name = "p"
-        Me.p.Size = New System.Drawing.Size(146, 20)
-        Me.p.TabIndex = 6
+        Me.nombre_tabla.Location = New System.Drawing.Point(9, 59)
+        Me.nombre_tabla.Name = "nombre_tabla"
+        Me.nombre_tabla.Size = New System.Drawing.Size(146, 20)
+        Me.nombre_tabla.TabIndex = 6
         '
-        'p1
+        'operaciones
         '
-        Me.p1.Location = New System.Drawing.Point(9, 108)
-        Me.p1.Name = "p1"
-        Me.p1.Size = New System.Drawing.Size(146, 20)
-        Me.p1.TabIndex = 3
+        Me.operaciones.Location = New System.Drawing.Point(9, 108)
+        Me.operaciones.Name = "operaciones"
+        Me.operaciones.Size = New System.Drawing.Size(146, 20)
+        Me.operaciones.TabIndex = 3
         '
         'Button1
         '
@@ -207,6 +205,7 @@ Partial Class Agregacion
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(620, 525)
+        Me.Controls.Add(Me.SQL_Label)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Algebra_Relacional)
         Me.Controls.Add(Me.Consulta_SQL)
@@ -218,11 +217,10 @@ Partial Class Agregacion
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Algebra_Relacional.ResumeLayout(False)
         Me.Algebra_Relacional.PerformLayout()
-        Me.Consulta_SQL.ResumeLayout(False)
-        Me.Consulta_SQL.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -235,9 +233,9 @@ Partial Class Agregacion
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents resultado As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents p As TextBox
-    Friend WithEvents p1 As TextBox
+    Friend WithEvents nombre_tabla As TextBox
+    Friend WithEvents operaciones As TextBox
     Friend WithEvents Button1 As Button
 End Class
