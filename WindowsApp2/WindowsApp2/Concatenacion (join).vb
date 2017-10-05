@@ -15,17 +15,29 @@
         tab1 = tabla1.Text
         tab2 = tabla2.Text
         pred = predicado.Text
+        Dim ConsultaExisteT1, ConsultaExisteT2 As Boolean
 
-        'Select * from  EMPLEADOS join CLIENTES on( EMPLEADOS.id_canton = CLIENTES.id_canton)
+        ConsultaExisteT1 = consultarExistencia(tab1)
+        ConsultaExisteT2 = consultarExistencia(tab2)
+
+
         valores = " Select *from " + tab1 + " join " + tab2 + " on " + tab1 + "." + pred + " = " + tab2 + "." + pred
-        LabelSQL.Text = " Select *from " + tab1 + " join " + tab2 + " on " + tab1 + "." + pred + " = " + tab2 + "." + pred
-        LabelA.Text = " π " + pred + "(" + tab1 + ")" + " U " + " π " + pred + "(" + tab2 + ")"
-        'MessageBox.Show(valoresU)
-        'SqlCommand Command() = New SqlCommand("select count(*) from" + x, cn)
-        llenarDatagridviewConcatenacion(DataGridView2, valores)
+        SQL_Label.Text = " Select * from " + tab1 + " join " + tab2 + " on " + tab1 + "." + pred + " = " + tab2 + "." + pred
+        Algebra_label.Text = " π " + pred + "(" + tab1 + ")" + " U " + " π " + pred + "(" + tab2 + ")"
+
+        If (ConsultaExisteT1 And ConsultaExisteT2) Then
 
 
+            llenarDatagridview(DataGridView2, valores)
+        Else
+            If (ConsultaExisteT1 = False) Then
+                MessageBox.Show("Error la tabla: " + tab1 + " no existe")
+            End If
 
+            If (ConsultaExisteT2 = False) Then
+                MessageBox.Show("Error la tabla: " + tab2 + " no existe")
+            End If
+        End If
 
 
     End Sub

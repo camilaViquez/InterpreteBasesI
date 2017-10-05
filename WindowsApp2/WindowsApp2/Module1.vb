@@ -65,7 +65,7 @@ Module Module1
         End Try
     End Sub
 
-    Public Sub llenarDatagridviewConcatenacion(ByVal dgv As DataGridView, ByVal parametrosU As String)
+    Public Sub llenarDatagridview(ByVal dgv As DataGridView, ByVal parametrosU As String)
         Try
             adaptador = New SqlDataAdapter(parametrosU, cn)
             dt = New DataTable
@@ -73,6 +73,7 @@ Module Module1
             dgv.DataSource = dt
 
         Catch ex As Exception
+            MessageBox.Show("Se presentó un error a la hora de realizar la consulta. ")
 
         End Try
 

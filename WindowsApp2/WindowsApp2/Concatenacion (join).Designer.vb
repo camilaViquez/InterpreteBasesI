@@ -22,14 +22,16 @@ Partial Class Concatenacion__join_
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.Algebra_Relacional = New System.Windows.Forms.GroupBox()
+        Me.LabelA = New System.Windows.Forms.Label()
         Me.Algebra_label = New System.Windows.Forms.Label()
         Me.Consulta_SQL = New System.Windows.Forms.GroupBox()
+        Me.LabelSQL = New System.Windows.Forms.Label()
         Me.SQL_Label = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -41,8 +43,6 @@ Partial Class Concatenacion__join_
         Me.tabla1 = New System.Windows.Forms.TextBox()
         Me.tabla2 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.LabelSQL = New System.Windows.Forms.Label()
-        Me.LabelA = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Algebra_Relacional.SuspendLayout()
@@ -64,51 +64,58 @@ Partial Class Concatenacion__join_
         '
         Me.DataGridView2.AllowUserToAddRows = False
         Me.DataGridView2.AllowUserToDeleteRows = False
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView2.Location = New System.Drawing.Point(16, 32)
         Me.DataGridView2.Name = "DataGridView2"
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView2.Size = New System.Drawing.Size(287, 199)
         Me.DataGridView2.TabIndex = 2
         '
         'Algebra_Relacional
         '
         Me.Algebra_Relacional.Controls.Add(Me.LabelA)
-        Me.Algebra_Relacional.Controls.Add(Me.Algebra_label)
         Me.Algebra_Relacional.Location = New System.Drawing.Point(24, 422)
         Me.Algebra_Relacional.Name = "Algebra_Relacional"
-        Me.Algebra_Relacional.Size = New System.Drawing.Size(483, 69)
+        Me.Algebra_Relacional.Size = New System.Drawing.Size(132, 25)
         Me.Algebra_Relacional.TabIndex = 20
         Me.Algebra_Relacional.TabStop = False
         Me.Algebra_Relacional.Text = "Algebra Relacional"
         '
+        'LabelA
+        '
+        Me.LabelA.AutoSize = True
+        Me.LabelA.Location = New System.Drawing.Point(6, 27)
+        Me.LabelA.Name = "LabelA"
+        Me.LabelA.Size = New System.Drawing.Size(0, 13)
+        Me.LabelA.TabIndex = 9
+        '
         'Algebra_label
         '
         Me.Algebra_label.AutoSize = True
-        Me.Algebra_label.Location = New System.Drawing.Point(27, 27)
+        Me.Algebra_label.Location = New System.Drawing.Point(51, 459)
         Me.Algebra_label.MaximumSize = New System.Drawing.Size(388, 80)
         Me.Algebra_label.MinimumSize = New System.Drawing.Size(3, 5)
         Me.Algebra_label.Name = "Algebra_label"
@@ -118,18 +125,25 @@ Partial Class Concatenacion__join_
         'Consulta_SQL
         '
         Me.Consulta_SQL.Controls.Add(Me.LabelSQL)
-        Me.Consulta_SQL.Controls.Add(Me.SQL_Label)
         Me.Consulta_SQL.Location = New System.Drawing.Point(24, 335)
         Me.Consulta_SQL.Name = "Consulta_SQL"
-        Me.Consulta_SQL.Size = New System.Drawing.Size(483, 69)
+        Me.Consulta_SQL.Size = New System.Drawing.Size(104, 28)
         Me.Consulta_SQL.TabIndex = 19
         Me.Consulta_SQL.TabStop = False
         Me.Consulta_SQL.Text = "Consulta_SQL"
         '
+        'LabelSQL
+        '
+        Me.LabelSQL.AutoSize = True
+        Me.LabelSQL.Location = New System.Drawing.Point(6, 26)
+        Me.LabelSQL.Name = "LabelSQL"
+        Me.LabelSQL.Size = New System.Drawing.Size(0, 13)
+        Me.LabelSQL.TabIndex = 8
+        '
         'SQL_Label
         '
         Me.SQL_Label.AutoSize = True
-        Me.SQL_Label.Location = New System.Drawing.Point(27, 33)
+        Me.SQL_Label.Location = New System.Drawing.Point(51, 366)
         Me.SQL_Label.MaximumSize = New System.Drawing.Size(388, 80)
         Me.SQL_Label.MinimumSize = New System.Drawing.Size(3, 5)
         Me.SQL_Label.Name = "SQL_Label"
@@ -226,28 +240,14 @@ Partial Class Concatenacion__join_
         Me.Button1.Text = "Consultar"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'LabelSQL
-        '
-        Me.LabelSQL.AutoSize = True
-        Me.LabelSQL.Location = New System.Drawing.Point(6, 26)
-        Me.LabelSQL.Name = "LabelSQL"
-        Me.LabelSQL.Size = New System.Drawing.Size(0, 13)
-        Me.LabelSQL.TabIndex = 8
-        '
-        'LabelA
-        '
-        Me.LabelA.AutoSize = True
-        Me.LabelA.Location = New System.Drawing.Point(6, 27)
-        Me.LabelA.Name = "LabelA"
-        Me.LabelA.Size = New System.Drawing.Size(0, 13)
-        Me.LabelA.TabIndex = 9
-        '
         'Concatenacion__join_
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(600, 514)
         Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.Algebra_label)
+        Me.Controls.Add(Me.SQL_Label)
         Me.Controls.Add(Me.Algebra_Relacional)
         Me.Controls.Add(Me.Consulta_SQL)
         Me.Controls.Add(Me.GroupBox1)
@@ -263,6 +263,7 @@ Partial Class Concatenacion__join_
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
