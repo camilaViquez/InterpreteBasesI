@@ -30,4 +30,8 @@
 
 
     End Sub
+
+    Private Sub SQL_Label_Click(sender As Object, e As EventArgs) Handles SQL_Label.Click
+
+    End Sub
 End Class

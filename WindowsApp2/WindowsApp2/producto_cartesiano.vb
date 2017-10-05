@@ -6,11 +6,12 @@
     Public nombre_nuevo
     Public existe, existe2 As Boolean
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        DataGridView2.DataSource = "null"
         nombre_tabla1 = p.Text
         Nombre_tabla2 = p1.Text
         nombre_nuevo = p2.Text
         If nombre_nuevo = "" Then
-            nombre_nuevo = "."
+            nombre_nuevo = "a"
 
         End If
 

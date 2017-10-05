@@ -58,9 +58,7 @@ C:\Users\rosibel\Desktop\InterpreteBasesI\WindowsApp2\WindowsApp2\obj\Debug\Wind
 C:\Users\rosibel\Desktop\InterpreteBasesI\WindowsApp2\WindowsApp2\obj\Debug\WindowsApp2.concatenacion_natural__natural_join_.resources
 C:\Users\rosibel\Desktop\InterpreteBasesI\WindowsApp2\WindowsApp2\obj\Debug\WindowsApp2.Diferencia_de_conjuntos.resources
 C:\Users\rosibel\Desktop\InterpreteBasesI\WindowsApp2\WindowsApp2\obj\Debug\WindowsApp2.Division.resources
-C:\Users\rosibel\Desktop\InterpreteBasesI\WindowsApp2\WindowsApp2\obj\Debug\WindowsApp2.Form1.resources
 C:\Users\rosibel\Desktop\InterpreteBasesI\WindowsApp2\WindowsApp2\obj\Debug\WindowsApp2.proyeccion.resources
-C:\Users\rosibel\Desktop\InterpreteBasesI\WindowsApp2\WindowsApp2\obj\Debug\WindowsApp2.Form3.resources
 C:\Users\rosibel\Desktop\InterpreteBasesI\WindowsApp2\WindowsApp2\obj\Debug\WindowsApp2.Form4.resources
 C:\Users\rosibel\Desktop\InterpreteBasesI\WindowsApp2\WindowsApp2\obj\Debug\WindowsApp2.Resources.resources
 C:\Users\rosibel\Desktop\InterpreteBasesI\WindowsApp2\WindowsApp2\obj\Debug\WindowsApp2.producto_cartesiano.resources
@@ -70,3 +68,5 @@ C:\Users\rosibel\Desktop\InterpreteBasesI\WindowsApp2\WindowsApp2\obj\Debug\Wind
 C:\Users\rosibel\Desktop\InterpreteBasesI\WindowsApp2\WindowsApp2\obj\Debug\WindowsApp2.exe
 C:\Users\rosibel\Desktop\InterpreteBasesI\WindowsApp2\WindowsApp2\obj\Debug\WindowsApp2.xml
 C:\Users\rosibel\Desktop\InterpreteBasesI\WindowsApp2\WindowsApp2\obj\Debug\WindowsApp2.pdb
+C:\Users\rosibel\Desktop\InterpreteBasesI\WindowsApp2\WindowsApp2\obj\Debug\WindowsApp2.union.resources
+C:\Users\rosibel\Desktop\InterpreteBasesI\WindowsApp2\WindowsApp2\obj\Debug\WindowsApp2.seleccionVentana.resources
