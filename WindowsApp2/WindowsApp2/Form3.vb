@@ -18,7 +18,7 @@
         Nombre_tabla2 = p1.Text
         Dim aridadT1, aridadT2 As Integer
         Dim existe1, existe2 As Boolean
-
+        Dim nombreResultado As String
         Dim TipoAtributoComparacion As Boolean
         Dim aridadAux As Integer
         TipoAtributoComparacion = True
@@ -27,11 +27,13 @@
         aridadT2 = AridadTabla(Nombre_tabla2)
         aridadAux = 0
 
-
+        nombreResultado = NmbreResultadoT.Text
         Dim tiposAtributosT1(aridadT1), tiposAtributosT2(aridadT2) As String
 
         existe1 = consultarExistencia(nombre_tabla1)
         existe2 = consultarExistencia(Nombre_tabla2)
+
+
 
         tiposAtributosT1 = listaAtributos(nombre_tabla1)
         tiposAtributosT2 = listaAtributos(Nombre_tabla2)
@@ -68,28 +70,33 @@
             End If
 
             If (existe2 = False) Then
-                    MessageBox.Show("No existe la tabla: " + Nombre_tabla2)
-                End If
+                MessageBox.Show("No existe la tabla: " + Nombre_tabla2)
+            End If
 
-                If (existe1 = False) Then
-                    MessageBox.Show("No existe la tabla: " + nombre_tabla1)
-                End If
+            If (existe1 = False) Then
+                MessageBox.Show("No existe la tabla: " + nombre_tabla1)
+            End If
 
-                If (TipoAtributoComparacion = True) Then
-                    MessageBox.Show("Tipos de atributos diferentes")
-                End If
+            If (TipoAtributoComparacion = True) Then
+                MessageBox.Show("Tipos de atributos diferentes")
+            End If
 
+            If (nombreResultado <> "") Then
 
-
+                MessageBox.Show("no se guarda la tabla")
+            Else
+                MessageBox.Show("Nueva tabla guardada")
 
             End If
+        End If
 
     End Sub
 
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
+    End Sub
 
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles NmbreResultadoT.TextChanged
 
-
-
-
+    End Sub
 End Class
