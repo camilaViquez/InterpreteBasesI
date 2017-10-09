@@ -36,6 +36,9 @@ Partial Class Bienvenida
         Me.Agrupación = New System.Windows.Forms.Button()
         Me.Conectar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TablasTemporales = New System.Windows.Forms.Button()
+        Me.tablasPermanentes = New System.Windows.Forms.Button()
+        Me.acercaDe = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -159,6 +162,8 @@ Partial Class Bienvenida
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.tablasPermanentes)
+        Me.GroupBox1.Controls.Add(Me.TablasTemporales)
         Me.GroupBox1.Controls.Add(Me.Diferencia_de_Conjuntos_btn)
         Me.GroupBox1.Controls.Add(Me.Seleccion)
         Me.GroupBox1.Controls.Add(Me.Agrupación)
@@ -178,11 +183,39 @@ Partial Class Bienvenida
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Consultas"
         '
+        'TablasTemporales
+        '
+        Me.TablasTemporales.Location = New System.Drawing.Point(0, 261)
+        Me.TablasTemporales.Name = "TablasTemporales"
+        Me.TablasTemporales.Size = New System.Drawing.Size(150, 23)
+        Me.TablasTemporales.TabIndex = 12
+        Me.TablasTemporales.Text = "Ver tablas temporales"
+        Me.TablasTemporales.UseVisualStyleBackColor = True
+        '
+        'tablasPermanentes
+        '
+        Me.tablasPermanentes.Location = New System.Drawing.Point(218, 261)
+        Me.tablasPermanentes.Name = "tablasPermanentes"
+        Me.tablasPermanentes.Size = New System.Drawing.Size(150, 23)
+        Me.tablasPermanentes.TabIndex = 13
+        Me.tablasPermanentes.Text = "Ver tablas permanentes"
+        Me.tablasPermanentes.UseVisualStyleBackColor = True
+        '
+        'acercaDe
+        '
+        Me.acercaDe.Location = New System.Drawing.Point(12, 12)
+        Me.acercaDe.Name = "acercaDe"
+        Me.acercaDe.Size = New System.Drawing.Size(96, 23)
+        Me.acercaDe.TabIndex = 14
+        Me.acercaDe.Text = "Acerca De"
+        Me.acercaDe.UseVisualStyleBackColor = True
+        '
         'Bienvenida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(679, 451)
+        Me.Controls.Add(Me.acercaDe)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Conectar)
         Me.Name = "Bienvenida"
@@ -206,4 +239,7 @@ Partial Class Bienvenida
     Friend WithEvents Agrupación As Button
     Friend WithEvents Conectar As Button
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents tablasPermanentes As Button
+    Friend WithEvents TablasTemporales As Button
+    Friend WithEvents acercaDe As Button
 End Class

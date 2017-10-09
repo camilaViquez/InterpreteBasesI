@@ -10,32 +10,56 @@
         nombre_tabla1 = p.Text
         Nombre_tabla2 = p1.Text
         Dim aridadT1, aridadT2 As Integer
-        Dim existe1, existe2 As Boolean
-        Dim nombreResultado As String
+        Dim existe1, existe2, existe1T, existe2T As Boolean
+        Dim nombreResultado, nombre_tabla1Aux, nombre_tabla2Aux As String
         Dim TipoAtributoComparacion As Boolean
         Dim aridadAux As Integer
-        TipoAtributoComparacion = True
+        TipoAtributoComparacion = False
 
         aridadT1 = AridadTabla(nombre_tabla1)
         aridadT2 = AridadTabla(Nombre_tabla2)
         aridadAux = 0
 
         nombreResultado = NmbreResultadoT.Text
-        Dim tiposAtributosT1(aridadT1), tiposAtributosT2(aridadT2) As String
+        Dim tiposAtributosT1, tiposAtributosT2 As String()
 
         existe1 = consultarExistencia(nombre_tabla1)
         existe2 = consultarExistencia(Nombre_tabla2)
+        existe1T = consultarExistenciaTemporal(nombre_tabla1)
+        existe2T = consultarExistenciaTemporal(Nombre_tabla2)
 
 
+        nombre_tabla1Aux = nombre_tabla1
+        nombre_tabla2Aux = Nombre_tabla2
 
-        tiposAtributosT1 = listaAtributos(nombre_tabla1)
-        tiposAtributosT2 = listaAtributos(Nombre_tabla2)
+        If (existe1T) Then
+            nombre_tabla1Aux = "#" + nombre_tabla1Aux
+            tiposAtributosT1 = listaAtributosTemporal(nombre_tabla1)
+            aridadT1 = AridadTablaTemporal(nombre_tabla1)
+        End If
+        If (existe2T) Then
+            nombre_tabla2Aux = "#" + nombre_tabla2Aux
+            tiposAtributosT2 = listaAtributosTemporal(Nombre_tabla2)
+            aridadT2 = AridadTablaTemporal(Nombre_tabla2)
+        End If
+        If (existe1) Then
+            tiposAtributosT1 = listaAtributos(nombre_tabla1)
+            aridadT1 = AridadTabla(nombre_tabla1)
+        End If
 
+        If (existe2) Then
+            tiposAtributosT2 = listaAtributos(Nombre_tabla2)
+            aridadT2 = AridadTabla(Nombre_tabla2)
+        End If
+
+
+        aridadT1 = aridadT1 - 1
         Debug.Write(aridadT1)
         Debug.Write(TipoAtributoComparacion)
 
-        While (TipoAtributoComparacion = True And aridadAux < aridadT1)
+        While (TipoAtributoComparacion = False And aridadAux < aridadT1)
             TipoAtributoComparacion = comparacionAtributos(tiposAtributosT1(aridadAux), tiposAtributosT2(aridadAux))
+
             Debug.WriteLine(aridadAux.ToString)
             Debug.WriteLine(tiposAtributosT1(aridadAux))
             Debug.WriteLine(tiposAtributosT2(aridadAux))
@@ -47,13 +71,13 @@
 
 
 
-        valores = "select * from " + nombre_tabla1 + " intersect " + "select * from " + Nombre_tabla2
+        valores = "select * from " + nombre_tabla1Aux + " intersect " + "select * from " + nombre_tabla2Aux
         valoresA = nombre_tabla1 + " ∩ " + Nombre_tabla2
         SQL_Label.Text = valores
         Algebra_label.Text = valoresA
 
 
-        If ((aridadT1 = aridadT2) And existe1 And existe2 And TipoAtributoComparacion = True) Then
+        If ((aridadT1 = aridadT2) And (existe1 Or existe1T) And (existe2 Or existe2T) And TipoAtributoComparacion) Then
             llenarDatagridviewUnion(DataGridView2, valores)
 
         Else
@@ -73,15 +97,21 @@
             If (TipoAtributoComparacion = True) Then
                 MessageBox.Show("Tipos de atributos diferentes")
             End If
-
-            If (nombreResultado <> "") Then
-
-                MessageBox.Show("no se guarda la tabla")
-            Else
-                MessageBox.Show("Nueva tabla guardada")
-
-            End If
         End If
+        If (nombreResultado = "") Then
+
+            MessageBox.Show("no se guarda la tabla")
+        End If
+        If (nombreResultado <> "") Then
+            Dim comandoNewTable As String
+            comandoNewTable = "select * into #" + nombreResultado + " from " + nombre_tabla1Aux + " intersect " + "select * from " + nombre_tabla2Aux
+            MessageBox.Show(comandoNewTable)
+
+            crearTablaTemporal(comandoNewTable)
+            MessageBox.Show("Nueva tabla guardada")
+
+        End If
+
 
 
     End Sub

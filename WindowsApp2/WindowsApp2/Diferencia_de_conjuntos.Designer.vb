@@ -41,8 +41,6 @@ Partial Class Diferencia_de_conjuntos
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Algebra_Relacional.SuspendLayout()
-        Me.Consulta_SQL.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -92,10 +90,9 @@ Partial Class Diferencia_de_conjuntos
         '
         'Algebra_Relacional
         '
-        Me.Algebra_Relacional.Controls.Add(Me.Algebra_label)
         Me.Algebra_Relacional.Location = New System.Drawing.Point(42, 357)
         Me.Algebra_Relacional.Name = "Algebra_Relacional"
-        Me.Algebra_Relacional.Size = New System.Drawing.Size(200, 69)
+        Me.Algebra_Relacional.Size = New System.Drawing.Size(127, 23)
         Me.Algebra_Relacional.TabIndex = 15
         Me.Algebra_Relacional.TabStop = False
         Me.Algebra_Relacional.Text = "Algebra Relacional"
@@ -103,7 +100,7 @@ Partial Class Diferencia_de_conjuntos
         'Algebra_label
         '
         Me.Algebra_label.AutoSize = True
-        Me.Algebra_label.Location = New System.Drawing.Point(27, 27)
+        Me.Algebra_label.Location = New System.Drawing.Point(48, 397)
         Me.Algebra_label.MaximumSize = New System.Drawing.Size(388, 80)
         Me.Algebra_label.MinimumSize = New System.Drawing.Size(3, 5)
         Me.Algebra_label.Name = "Algebra_label"
@@ -112,10 +109,9 @@ Partial Class Diferencia_de_conjuntos
         '
         'Consulta_SQL
         '
-        Me.Consulta_SQL.Controls.Add(Me.SQL_Label)
         Me.Consulta_SQL.Location = New System.Drawing.Point(42, 267)
         Me.Consulta_SQL.Name = "Consulta_SQL"
-        Me.Consulta_SQL.Size = New System.Drawing.Size(200, 69)
+        Me.Consulta_SQL.Size = New System.Drawing.Size(99, 23)
         Me.Consulta_SQL.TabIndex = 14
         Me.Consulta_SQL.TabStop = False
         Me.Consulta_SQL.Text = "Consulta_SQL"
@@ -123,7 +119,7 @@ Partial Class Diferencia_de_conjuntos
         'SQL_Label
         '
         Me.SQL_Label.AutoSize = True
-        Me.SQL_Label.Location = New System.Drawing.Point(27, 33)
+        Me.SQL_Label.Location = New System.Drawing.Point(48, 309)
         Me.SQL_Label.MaximumSize = New System.Drawing.Size(388, 80)
         Me.SQL_Label.MinimumSize = New System.Drawing.Size(3, 5)
         Me.SQL_Label.Name = "SQL_Label"
@@ -207,6 +203,8 @@ Partial Class Diferencia_de_conjuntos
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(639, 453)
+        Me.Controls.Add(Me.Algebra_label)
+        Me.Controls.Add(Me.SQL_Label)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Algebra_Relacional)
         Me.Controls.Add(Me.Consulta_SQL)
@@ -216,13 +214,10 @@ Partial Class Diferencia_de_conjuntos
         Me.Text = "Diferencia de Conjuntos"
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Algebra_Relacional.ResumeLayout(False)
-        Me.Algebra_Relacional.PerformLayout()
-        Me.Consulta_SQL.ResumeLayout(False)
-        Me.Consulta_SQL.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 

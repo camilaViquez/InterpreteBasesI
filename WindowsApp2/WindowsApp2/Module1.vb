@@ -158,7 +158,30 @@ Module Module1
         Return aux
 
     End Function
+    Public Function consultarExistenciaTemporal(ByVal parametros As String) As Boolean
+        Dim aux As Boolean = False
+        Try
+            cmd = New SqlCommand(" Select * From tempdb.INFORMATION_SCHEMA.TABLES Where TABLE_NAME Like '#" + parametros + "%'", cn)
+            dr = cmd.ExecuteReader
+            If dr.Read Then
+                aux = True
+                dr.Close()
+            End If
+            cmd.Dispose()
 
+
+        Catch ex As Exception
+
+            MessageBox.Show("ERROR AL COMPROBAR LA EXISTENCIA DE LA TABLA")
+
+        End Try
+        dr.Close()
+        cmd.Dispose()
+
+
+        Return aux
+
+    End Function
     Function cantidadTablasEnBD() As Integer
         Dim valor As Integer
         Try
@@ -189,6 +212,24 @@ Module Module1
         dr.Close()
         Return resultado
     End Function
+
+    Function AridadTablaTemporal(ByVal tabla1 As String) As String
+        Dim resultado As String
+        Try
+            cmd = New SqlCommand("SELECT COUNT(*) FROM tempdb.information_schema.columns WHERE table_name like '#" + tabla1 + "%'", cn)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            resultado = dr(0).ToString
+            dr.Close()
+        Catch ex As Exception
+            dr.Close()
+
+        End Try
+        dr.Close()
+        Return resultado
+    End Function
+
+
 
     Function obtenerArregloTablasEnBase() As String()
         Dim cantTablas As Integer = cantidadTablasEnBD()
@@ -238,6 +279,92 @@ Module Module1
 
     End Function
 
+
+    Function listaAtributosTemporal(ByVal nombreTabla As String) As String()
+        Dim aridad As Integer = 0
+        aridad = AridadTablaTemporal(nombreTabla)
+        Dim arregloAtributos(aridad) As String
+        Dim posicion As Integer = 0
+        Debug.WriteLine(aridad.ToString)
+
+        Try
+            Debug.WriteLine("TRY")
+            cmd = New SqlCommand("SELECT * FROM tempdb.information_schema.columns WHERE table_name like '#" + nombreTabla + "%'", cn)
+            dr = cmd.ExecuteReader
+            Debug.WriteLine("atributos")
+            While dr.Read()
+                Debug.WriteLine("WHILE")
+                arregloAtributos(posicion) = dr(7).ToString
+                posicion = posicion + 1
+                Debug.WriteLine(dr(7).ToString)
+            End While
+            dr.Close()
+
+        Catch ex As Exception
+            Debug.WriteLine("error atributos")
+            dr.Close()
+
+        End Try
+        Debug.WriteLine("salio atributos")
+        Return arregloAtributos
+
+    End Function
+
+    Function listaAtributosTemporalNombres(ByVal nombreTabla As String) As String()
+        Dim aridad As Integer = 0
+        aridad = AridadTablaTemporal(nombreTabla)
+        Dim arregloAtributos(aridad) As String
+        Dim posicion As Integer = 0
+        Debug.WriteLine(aridad.ToString)
+
+        Try
+            Debug.WriteLine("TRY")
+            cmd = New SqlCommand("SELECT * FROM tempdb.information_schema.columns WHERE table_name like '#" + nombreTabla + "%'", cn)
+            dr = cmd.ExecuteReader
+            Debug.WriteLine("atributos")
+            While dr.Read()
+                Debug.WriteLine("WHILE")
+                arregloAtributos(posicion) = dr(3).ToString
+                posicion = posicion + 1
+                Debug.WriteLine(dr(3).ToString)
+            End While
+            dr.Close()
+
+        Catch ex As Exception
+            Debug.WriteLine("error atributos")
+            dr.Close()
+
+        End Try
+        Debug.WriteLine("salio atributos")
+        Return arregloAtributos
+
+    End Function
+    Function listaAtributosNombre(ByVal nombreTabla As String) As String()
+        Dim aridad As Integer = AridadTabla(nombreTabla)
+        Dim arregloAtributos(aridad) As String
+        Dim posicion As Integer = 0
+
+        Try
+            cmd = New SqlCommand("SELECT * FROM information_schema.columns WHERE table_name = '" + nombreTabla + "'", cn)
+            dr = cmd.ExecuteReader
+
+            While dr.Read()
+                Debug.WriteLine(posicion)
+                arregloAtributos(posicion) = dr(3).ToString
+                posicion = posicion + 1
+                Debug.WriteLine(dr(3).ToString)
+            End While
+            dr.Close()
+
+        Catch ex As Exception
+            dr.Close()
+
+        End Try
+        Return arregloAtributos
+
+    End Function
+
+
     Function comparacionAtributos(ByVal atributo1 As String, ByVal atributo2 As String) As Boolean
         If (atributo1 = atributo2) Then
 
@@ -249,4 +376,61 @@ Module Module1
     End Function
 
 
+    Function listaNuevosAtributosConcatenacion(ByVal texto As String) As String()
+        Dim strArray() As String = Split(texto, ",")
+        Return strArray
+    End Function
+
+    Function NuevosAtributosRenombramientos(ByVal nombreTabla As String, ByVal listaNuevosNombres As String()) As String
+        Dim listaAtributosDeTabla As String() = listaAtributosNombre(nombreTabla)
+        Dim largoListas As Integer = listaNuevosNombres.Length
+        Dim indice As Integer = 0
+
+        Dim listaRenombramiento(largoListas) As String
+        While indice < largoListas
+            listaRenombramiento(indice) = listaAtributosDeTabla(indice).ToString + " AS " + listaNuevosNombres(indice).ToString
+            indice = indice + 1
+        End While
+        indice = 0
+        Dim textoConTodosAs As String = ""
+        While indice < largoListas
+            If indice = largoListas - 1 Then
+                textoConTodosAs = textoConTodosAs + " " + listaRenombramiento(indice)
+            Else
+                textoConTodosAs = textoConTodosAs + " " + listaRenombramiento(indice) + ","
+            End If
+            indice = indice + 1
+        End While
+        Return textoConTodosAs
+    End Function
+
+
+
+    Function crearTablaTemporal(ByVal comando As String)
+        Try
+            cmd = New SqlCommand(comando, cn)
+            cmd.ExecuteNonQuery()
+            MessageBox.Show("se creo")
+        Catch ex As Exception
+            MessageBox.Show("error en la creacion" + ex.ToString)
+        End Try
+
+
+    End Function
+
+
+
+
+    Function crearTablaTemporalAgregacion(ByVal comando As String)
+        Try
+            cmd = New SqlCommand(comando, cn)
+            cmd.ExecuteNonQuery()
+            MessageBox.Show("se creo")
+        Catch ex As Exception
+            MessageBox.Show("error en la creacion debe de renombrar la operacion" + ex.ToString)
+        End Try
+
+
+    End Function
 End Module
+

@@ -6,8 +6,8 @@
     Public prueba, prueba1 As Boolean
     Public datatable
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
-
+        Dim ExisteT As Boolean
+        Dim nombreResultadoT, comandoCreacionT As String
 
         DataGridView2.DataSource = "null"
         x = ntabla.Text
@@ -17,14 +17,36 @@
         SQL_Label.Text = valores
         Algebra_label.Text = valoresA
         prueba = consultarExistencia(x)
+        ExisteT = consultarExistenciaTemporal(x)
+
+        nombreResultadoT = resultado.Text
+
+        If (ExisteT) Then
+            valores = "Select " + y + " from " + "#" + x
+
+        End If
+
 
         Try
-            If prueba Then
+
+
+            If prueba Or ExisteT Then
                 llenarDatagridviewSeleccion(DataGridView2, valores)
 
             Else
                 MessageBox.Show("Error la tabla no existe")
             End If
+
+
+            If nombreResultadoT = "" Then
+
+            Else
+                comandoCreacionT = "Select " + y + " into #" + nombreResultadoT + " from " + x
+                crearTablaTemporal(comandoCreacionT)
+                MessageBox.Show("Se guardo la consulta")
+            End If
+
+
         Catch ex As Exception
             MessageBox.Show("Se presentó un error.")
         End Try
