@@ -25,12 +25,12 @@ Partial Class Diferencia_de_conjuntos
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.Algebra_label = New System.Windows.Forms.Label()
+        Me.SQL_Label = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.Algebra_Relacional = New System.Windows.Forms.GroupBox()
-        Me.Algebra_label = New System.Windows.Forms.Label()
         Me.Consulta_SQL = New System.Windows.Forms.GroupBox()
-        Me.SQL_Label = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -44,13 +44,33 @@ Partial Class Diferencia_de_conjuntos
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
+        'Algebra_label
+        '
+        Me.Algebra_label.AutoSize = True
+        Me.Algebra_label.Location = New System.Drawing.Point(47, 402)
+        Me.Algebra_label.MaximumSize = New System.Drawing.Size(388, 80)
+        Me.Algebra_label.MinimumSize = New System.Drawing.Size(3, 5)
+        Me.Algebra_label.Name = "Algebra_label"
+        Me.Algebra_label.Size = New System.Drawing.Size(3, 13)
+        Me.Algebra_label.TabIndex = 18
+        '
+        'SQL_Label
+        '
+        Me.SQL_Label.AutoSize = True
+        Me.SQL_Label.Location = New System.Drawing.Point(47, 314)
+        Me.SQL_Label.MaximumSize = New System.Drawing.Size(388, 80)
+        Me.SQL_Label.MinimumSize = New System.Drawing.Size(3, 5)
+        Me.SQL_Label.Name = "SQL_Label"
+        Me.SQL_Label.Size = New System.Drawing.Size(3, 13)
+        Me.SQL_Label.TabIndex = 17
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.DataGridView2)
-        Me.GroupBox2.Location = New System.Drawing.Point(276, 32)
+        Me.GroupBox2.Location = New System.Drawing.Point(275, 37)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(322, 258)
-        Me.GroupBox2.TabIndex = 16
+        Me.GroupBox2.TabIndex = 23
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Resultado"
         '
@@ -90,41 +110,21 @@ Partial Class Diferencia_de_conjuntos
         '
         'Algebra_Relacional
         '
-        Me.Algebra_Relacional.Location = New System.Drawing.Point(42, 357)
+        Me.Algebra_Relacional.Location = New System.Drawing.Point(41, 362)
         Me.Algebra_Relacional.Name = "Algebra_Relacional"
         Me.Algebra_Relacional.Size = New System.Drawing.Size(127, 23)
-        Me.Algebra_Relacional.TabIndex = 15
+        Me.Algebra_Relacional.TabIndex = 22
         Me.Algebra_Relacional.TabStop = False
         Me.Algebra_Relacional.Text = "Algebra Relacional"
         '
-        'Algebra_label
-        '
-        Me.Algebra_label.AutoSize = True
-        Me.Algebra_label.Location = New System.Drawing.Point(48, 397)
-        Me.Algebra_label.MaximumSize = New System.Drawing.Size(388, 80)
-        Me.Algebra_label.MinimumSize = New System.Drawing.Size(3, 5)
-        Me.Algebra_label.Name = "Algebra_label"
-        Me.Algebra_label.Size = New System.Drawing.Size(3, 13)
-        Me.Algebra_label.TabIndex = 8
-        '
         'Consulta_SQL
         '
-        Me.Consulta_SQL.Location = New System.Drawing.Point(42, 267)
+        Me.Consulta_SQL.Location = New System.Drawing.Point(41, 272)
         Me.Consulta_SQL.Name = "Consulta_SQL"
         Me.Consulta_SQL.Size = New System.Drawing.Size(99, 23)
-        Me.Consulta_SQL.TabIndex = 14
+        Me.Consulta_SQL.TabIndex = 21
         Me.Consulta_SQL.TabStop = False
         Me.Consulta_SQL.Text = "Consulta_SQL"
-        '
-        'SQL_Label
-        '
-        Me.SQL_Label.AutoSize = True
-        Me.SQL_Label.Location = New System.Drawing.Point(48, 309)
-        Me.SQL_Label.MaximumSize = New System.Drawing.Size(388, 80)
-        Me.SQL_Label.MinimumSize = New System.Drawing.Size(3, 5)
-        Me.SQL_Label.Name = "SQL_Label"
-        Me.SQL_Label.Size = New System.Drawing.Size(3, 13)
-        Me.SQL_Label.TabIndex = 7
         '
         'GroupBox1
         '
@@ -134,10 +134,10 @@ Partial Class Diferencia_de_conjuntos
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.p)
         Me.GroupBox1.Controls.Add(Me.p1)
-        Me.GroupBox1.Location = New System.Drawing.Point(42, 32)
+        Me.GroupBox1.Location = New System.Drawing.Point(41, 37)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(181, 210)
-        Me.GroupBox1.TabIndex = 13
+        Me.GroupBox1.TabIndex = 20
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos"
         '
@@ -191,10 +191,10 @@ Partial Class Diferencia_de_conjuntos
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(433, 357)
+        Me.Button1.Location = New System.Drawing.Point(432, 362)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 12
+        Me.Button1.TabIndex = 19
         Me.Button1.Text = "Consultar"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -221,12 +221,12 @@ Partial Class Diferencia_de_conjuntos
 
     End Sub
 
+    Friend WithEvents Algebra_label As Label
+    Friend WithEvents SQL_Label As Label
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents Algebra_Relacional As GroupBox
-    Friend WithEvents Algebra_label As Label
     Friend WithEvents Consulta_SQL As GroupBox
-    Friend WithEvents SQL_Label As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label

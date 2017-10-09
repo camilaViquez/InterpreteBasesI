@@ -112,8 +112,8 @@
         End If
         If (nombreResultado = "") Then
 
-                MessageBox.Show("no se guarda la tabla")
-            End If
+            MessageBox.Show("no se guarda la tabla")
+        End If
         If (nombreResultado <> "") Then
             Dim comandoNuevaTabla As String = "select * " + "into #" + nuevoNom + " from " + nomt1 + " except " + "select * from " + nomt2
             crearTablaTemporal(comandoNuevaTabla)
