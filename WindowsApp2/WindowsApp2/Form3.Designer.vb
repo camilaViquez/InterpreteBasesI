@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form3
+Partial Class union
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -29,18 +29,18 @@ Partial Class Form3
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.Algebra_Relacional = New System.Windows.Forms.GroupBox()
         Me.Algebra_label = New System.Windows.Forms.Label()
-        Me.Consulta_SQL = New System.Windows.Forms.GroupBox()
-        Me.SQL_Label = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.p = New System.Windows.Forms.TextBox()
         Me.p1 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.SQL_Label = New System.Windows.Forms.Label()
+        Me.Consulta_SQL = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.NmbreResultadoT = New System.Windows.Forms.TextBox()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Algebra_Relacional.SuspendLayout()
-        Me.Consulta_SQL.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -90,10 +90,9 @@ Partial Class Form3
         '
         'Algebra_Relacional
         '
-        Me.Algebra_Relacional.Controls.Add(Me.Algebra_label)
         Me.Algebra_Relacional.Location = New System.Drawing.Point(14, 326)
         Me.Algebra_Relacional.Name = "Algebra_Relacional"
-        Me.Algebra_Relacional.Size = New System.Drawing.Size(200, 69)
+        Me.Algebra_Relacional.Size = New System.Drawing.Size(110, 23)
         Me.Algebra_Relacional.TabIndex = 15
         Me.Algebra_Relacional.TabStop = False
         Me.Algebra_Relacional.Text = "Algebra Relacional"
@@ -101,35 +100,17 @@ Partial Class Form3
         'Algebra_label
         '
         Me.Algebra_label.AutoSize = True
-        Me.Algebra_label.Location = New System.Drawing.Point(27, 27)
+        Me.Algebra_label.Location = New System.Drawing.Point(30, 352)
         Me.Algebra_label.MaximumSize = New System.Drawing.Size(388, 80)
         Me.Algebra_label.MinimumSize = New System.Drawing.Size(3, 5)
         Me.Algebra_label.Name = "Algebra_label"
         Me.Algebra_label.Size = New System.Drawing.Size(3, 13)
         Me.Algebra_label.TabIndex = 8
         '
-        'Consulta_SQL
-        '
-        Me.Consulta_SQL.Controls.Add(Me.SQL_Label)
-        Me.Consulta_SQL.Location = New System.Drawing.Point(14, 236)
-        Me.Consulta_SQL.Name = "Consulta_SQL"
-        Me.Consulta_SQL.Size = New System.Drawing.Size(228, 69)
-        Me.Consulta_SQL.TabIndex = 14
-        Me.Consulta_SQL.TabStop = False
-        Me.Consulta_SQL.Text = "Consulta_SQL"
-        '
-        'SQL_Label
-        '
-        Me.SQL_Label.AutoSize = True
-        Me.SQL_Label.Location = New System.Drawing.Point(27, 33)
-        Me.SQL_Label.MaximumSize = New System.Drawing.Size(388, 80)
-        Me.SQL_Label.MinimumSize = New System.Drawing.Size(3, 5)
-        Me.SQL_Label.Name = "SQL_Label"
-        Me.SQL_Label.Size = New System.Drawing.Size(3, 13)
-        Me.SQL_Label.TabIndex = 7
-        '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.NmbreResultadoT)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.p)
@@ -144,7 +125,7 @@ Partial Class Form3
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(22, 106)
+        Me.Label3.Location = New System.Drawing.Point(22, 91)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(105, 13)
         Me.Label3.TabIndex = 10
@@ -168,7 +149,7 @@ Partial Class Form3
         '
         'p1
         '
-        Me.p1.Location = New System.Drawing.Point(19, 122)
+        Me.p1.Location = New System.Drawing.Point(19, 107)
         Me.p1.Name = "p1"
         Me.p1.Size = New System.Drawing.Size(118, 20)
         Me.p1.TabIndex = 3
@@ -182,27 +163,61 @@ Partial Class Form3
         Me.Button1.Text = "Consultar"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Form3
+        'SQL_Label
+        '
+        Me.SQL_Label.AutoSize = True
+        Me.SQL_Label.Location = New System.Drawing.Point(30, 262)
+        Me.SQL_Label.MaximumSize = New System.Drawing.Size(388, 80)
+        Me.SQL_Label.MinimumSize = New System.Drawing.Size(3, 5)
+        Me.SQL_Label.Name = "SQL_Label"
+        Me.SQL_Label.Size = New System.Drawing.Size(3, 13)
+        Me.SQL_Label.TabIndex = 7
+        '
+        'Consulta_SQL
+        '
+        Me.Consulta_SQL.Location = New System.Drawing.Point(14, 236)
+        Me.Consulta_SQL.Name = "Consulta_SQL"
+        Me.Consulta_SQL.Size = New System.Drawing.Size(110, 23)
+        Me.Consulta_SQL.TabIndex = 14
+        Me.Consulta_SQL.TabStop = False
+        Me.Consulta_SQL.Text = "Consulta_SQL"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(6, 152)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(145, 13)
+        Me.Label1.TabIndex = 12
+        Me.Label1.Text = "Nombre de la tabla resultante"
+        '
+        'NmbreResultadoT
+        '
+        Me.NmbreResultadoT.Location = New System.Drawing.Point(19, 168)
+        Me.NmbreResultadoT.Name = "NmbreResultadoT"
+        Me.NmbreResultadoT.Size = New System.Drawing.Size(118, 20)
+        Me.NmbreResultadoT.TabIndex = 11
+        '
+        'union
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(585, 397)
+        Me.Controls.Add(Me.Algebra_label)
+        Me.Controls.Add(Me.SQL_Label)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Algebra_Relacional)
         Me.Controls.Add(Me.Consulta_SQL)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button1)
-        Me.Name = "Form3"
+        Me.Name = "union"
         Me.Text = "Unión"
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Algebra_Relacional.ResumeLayout(False)
-        Me.Algebra_Relacional.PerformLayout()
-        Me.Consulta_SQL.ResumeLayout(False)
-        Me.Consulta_SQL.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -210,12 +225,14 @@ Partial Class Form3
     Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents Algebra_Relacional As GroupBox
     Friend WithEvents Algebra_label As Label
-    Friend WithEvents Consulta_SQL As GroupBox
-    Friend WithEvents SQL_Label As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents p As TextBox
     Friend WithEvents p1 As TextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents SQL_Label As Label
+    Friend WithEvents Consulta_SQL As GroupBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents NmbreResultadoT As TextBox
 End Class

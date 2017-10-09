@@ -10,7 +10,7 @@
     End Sub
 
     Private Sub Seleccion_Click(sender As Object, e As EventArgs) Handles Seleccion.Click
-        Form1.Show()
+        seleccionVentana.Show()
 
     End Sub
 
@@ -20,7 +20,7 @@
     End Sub
 
     Private Sub Unión_Click(sender As Object, e As EventArgs) Handles Unión.Click
-        Form3.Show()
+        union.Show()
 
     End Sub
 

@@ -34,15 +34,13 @@ Partial Class producto_cartesiano
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.p2 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.p = New System.Windows.Forms.TextBox()
         Me.p1 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Algebra_Relacional.SuspendLayout()
-        Me.Consulta_SQL.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -92,10 +90,9 @@ Partial Class producto_cartesiano
         '
         'Algebra_Relacional
         '
-        Me.Algebra_Relacional.Controls.Add(Me.Algebra_label)
         Me.Algebra_Relacional.Location = New System.Drawing.Point(36, 361)
         Me.Algebra_Relacional.Name = "Algebra_Relacional"
-        Me.Algebra_Relacional.Size = New System.Drawing.Size(200, 69)
+        Me.Algebra_Relacional.Size = New System.Drawing.Size(112, 23)
         Me.Algebra_Relacional.TabIndex = 20
         Me.Algebra_Relacional.TabStop = False
         Me.Algebra_Relacional.Text = "Algebra Relacional"
@@ -103,7 +100,7 @@ Partial Class producto_cartesiano
         'Algebra_label
         '
         Me.Algebra_label.AutoSize = True
-        Me.Algebra_label.Location = New System.Drawing.Point(27, 27)
+        Me.Algebra_label.Location = New System.Drawing.Point(42, 402)
         Me.Algebra_label.MaximumSize = New System.Drawing.Size(388, 80)
         Me.Algebra_label.MinimumSize = New System.Drawing.Size(3, 5)
         Me.Algebra_label.Name = "Algebra_label"
@@ -112,10 +109,9 @@ Partial Class producto_cartesiano
         '
         'Consulta_SQL
         '
-        Me.Consulta_SQL.Controls.Add(Me.SQL_Label)
         Me.Consulta_SQL.Location = New System.Drawing.Point(36, 271)
         Me.Consulta_SQL.Name = "Consulta_SQL"
-        Me.Consulta_SQL.Size = New System.Drawing.Size(200, 69)
+        Me.Consulta_SQL.Size = New System.Drawing.Size(95, 23)
         Me.Consulta_SQL.TabIndex = 19
         Me.Consulta_SQL.TabStop = False
         Me.Consulta_SQL.Text = "Consulta_SQL"
@@ -123,7 +119,7 @@ Partial Class producto_cartesiano
         'SQL_Label
         '
         Me.SQL_Label.AutoSize = True
-        Me.SQL_Label.Location = New System.Drawing.Point(27, 33)
+        Me.SQL_Label.Location = New System.Drawing.Point(33, 305)
         Me.SQL_Label.MaximumSize = New System.Drawing.Size(388, 80)
         Me.SQL_Label.MinimumSize = New System.Drawing.Size(3, 5)
         Me.SQL_Label.Name = "SQL_Label"
@@ -134,7 +130,7 @@ Partial Class producto_cartesiano
         '
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.p2)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.p)
         Me.GroupBox1.Controls.Add(Me.p1)
@@ -163,12 +159,12 @@ Partial Class producto_cartesiano
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "Nombre de la tabla II"
         '
-        'TextBox1
+        'p2
         '
-        Me.TextBox1.Location = New System.Drawing.Point(6, 168)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox1.TabIndex = 17
+        Me.p2.Location = New System.Drawing.Point(6, 168)
+        Me.p2.Name = "p2"
+        Me.p2.Size = New System.Drawing.Size(149, 20)
+        Me.p2.TabIndex = 17
         '
         'Label2
         '
@@ -207,6 +203,8 @@ Partial Class producto_cartesiano
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(639, 490)
+        Me.Controls.Add(Me.Algebra_label)
+        Me.Controls.Add(Me.SQL_Label)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Algebra_Relacional)
         Me.Controls.Add(Me.Consulta_SQL)
@@ -216,13 +214,10 @@ Partial Class producto_cartesiano
         Me.Text = "producto_cartesiano"
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Algebra_Relacional.ResumeLayout(False)
-        Me.Algebra_Relacional.PerformLayout()
-        Me.Consulta_SQL.ResumeLayout(False)
-        Me.Consulta_SQL.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -235,7 +230,7 @@ Partial Class producto_cartesiano
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents p2 As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents p As TextBox
     Friend WithEvents p1 As TextBox

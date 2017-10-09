@@ -1,16 +1,34 @@
-﻿Public Class Form1
+﻿Public Class seleccionVentana
     Public x
     Public y
     Public valores
     Public valoresA
+    Public prueba, prueba1 As Boolean
+    Public datatable
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        x = p.Text
-        y = p1.Text
+
+
+
+        DataGridView2.DataSource = "null"
+        x = ntabla.Text
+        y = nAtributos.Text
+        valoresA = " σ " + y + "  ( " + x + " ) "
         valores = "Select " + y + " from " + x
-        valoresA = " σ " + y + "(" + x + ")"
         SQL_Label.Text = valores
         Algebra_label.Text = valoresA
-        llenarDatagridviewSeleccion(DataGridView2, valores)
+        prueba = consultarExistencia(x)
+
+        Try
+            If prueba Then
+                llenarDatagridviewSeleccion(DataGridView2, valores)
+
+            Else
+                MessageBox.Show("Error la tabla no existe")
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Se presentó un error.")
+        End Try
+
 
     End Sub
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
@@ -18,7 +36,7 @@
     End Sub
 
 
-    Public Sub p_TextChanged(sender As Object, e As EventArgs) Handles p.TextChanged
+    Public Sub p_TextChanged(sender As Object, e As EventArgs) Handles ntabla.TextChanged
 
     End Sub
 
