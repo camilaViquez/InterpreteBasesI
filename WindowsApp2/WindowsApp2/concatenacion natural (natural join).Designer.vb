@@ -110,7 +110,7 @@ Partial Class concatenacion_natural__natural_join_
         '
         'Algebra_Relacional
         '
-<<<<<<< HEAD
+
         Me.Algebra_Relacional.Location = New System.Drawing.Point(34, 409)
         Me.Algebra_Relacional.Name = "Algebra_Relacional"
         Me.Algebra_Relacional.Size = New System.Drawing.Size(111, 22)
@@ -147,24 +147,7 @@ Partial Class concatenacion_natural__natural_join_
         Me.SQL_Label.Size = New System.Drawing.Size(3, 13)
         Me.SQL_Label.TabIndex = 7
         '
-=======
-        Me.Algebra_Relacional.Location = New System.Drawing.Point(34, 415)
-        Me.Algebra_Relacional.Name = "Algebra_Relacional"
-        Me.Algebra_Relacional.Size = New System.Drawing.Size(111, 22)
-        Me.Algebra_Relacional.TabIndex = 32
-        Me.Algebra_Relacional.TabStop = False
-        Me.Algebra_Relacional.Text = "Algebra Relacional"
-        '
-        'Consulta_SQL
-        '
-        Me.Consulta_SQL.Location = New System.Drawing.Point(34, 325)
-        Me.Consulta_SQL.Name = "Consulta_SQL"
-        Me.Consulta_SQL.Size = New System.Drawing.Size(111, 34)
-        Me.Consulta_SQL.TabIndex = 31
-        Me.Consulta_SQL.TabStop = False
-        Me.Consulta_SQL.Text = "Consulta_SQL"
-        '
->>>>>>> ec7df502e11f417ba453f9cbbc7bc48357161b51
+
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Label1)
@@ -173,11 +156,9 @@ Partial Class concatenacion_natural__natural_join_
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.T1)
         Me.GroupBox1.Controls.Add(Me.T2)
-<<<<<<< HEAD
+
         Me.GroupBox1.Location = New System.Drawing.Point(34, 23)
-=======
-        Me.GroupBox1.Location = New System.Drawing.Point(34, 29)
->>>>>>> ec7df502e11f417ba453f9cbbc7bc48357161b51
+
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(181, 231)
         Me.GroupBox1.TabIndex = 30
