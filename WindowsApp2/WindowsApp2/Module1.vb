@@ -19,7 +19,7 @@ Module Module1
 
     Sub abrirConexion()
         Try
-            cn = New SqlConnection("Data Source=LEO;Initial Catalog=Ventas;Integrated Security=True")
+            cn = New SqlConnection("Data Source=MATILDA;Initial Catalog=Ventas;Integrated Security=True")
             cn.Open()
 
             MessageBox.Show("Se realizó la conección con exito")
