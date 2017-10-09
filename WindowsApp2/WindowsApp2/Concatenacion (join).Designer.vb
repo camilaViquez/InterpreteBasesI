@@ -91,13 +91,13 @@ Partial Class Concatenacion__join_
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridView2.Size = New System.Drawing.Size(287, 199)
+        Me.DataGridView2.Size = New System.Drawing.Size(288, 220)
         Me.DataGridView2.TabIndex = 2
         '
         'Algebra_Relacional
         '
         Me.Algebra_Relacional.Controls.Add(Me.LabelA)
-        Me.Algebra_Relacional.Location = New System.Drawing.Point(24, 422)
+        Me.Algebra_Relacional.Location = New System.Drawing.Point(24, 400)
         Me.Algebra_Relacional.Name = "Algebra_Relacional"
         Me.Algebra_Relacional.Size = New System.Drawing.Size(132, 25)
         Me.Algebra_Relacional.TabIndex = 20
@@ -233,7 +233,7 @@ Partial Class Concatenacion__join_
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(513, 479)
+        Me.Button1.Location = New System.Drawing.Point(442, 366)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 17
@@ -244,7 +244,7 @@ Partial Class Concatenacion__join_
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(600, 514)
+        Me.ClientSize = New System.Drawing.Size(600, 465)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Algebra_label)
         Me.Controls.Add(Me.SQL_Label)

@@ -75,4 +75,8 @@
     Private Sub Conectar_Click(sender As Object, e As EventArgs) Handles Conectar.Click
         abrirConexion()
     End Sub
+
+    Private Sub tablasPermanentes_Click(sender As Object, e As EventArgs) Handles tablasPermanentes.Click
+
+    End Sub
 End Class

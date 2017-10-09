@@ -5,7 +5,9 @@
     Public nombre_tabla1
     Public Nombre_tabla2
 
-    Private Sub Algebra_Relacional_Enter(sender As Object, e As EventArgs)
+
+    Private Sub Algebra_Relacional_Enter(sender As Object, e As EventArgs) Handles Algebra_Relacional.Enter
+
 
     End Sub
 
@@ -229,7 +231,6 @@
 
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
 
-    End Sub
+
 End Class

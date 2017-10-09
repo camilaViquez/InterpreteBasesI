@@ -34,7 +34,7 @@ Partial Class producto_cartesiano
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.p2 = New System.Windows.Forms.TextBox()
+        Me.resultado = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.p = New System.Windows.Forms.TextBox()
         Me.p1 = New System.Windows.Forms.TextBox()
@@ -130,7 +130,7 @@ Partial Class producto_cartesiano
         '
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.p2)
+        Me.GroupBox1.Controls.Add(Me.resultado)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.p)
         Me.GroupBox1.Controls.Add(Me.p1)
@@ -159,12 +159,12 @@ Partial Class producto_cartesiano
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "Nombre de la tabla II"
         '
-        'p2
+        'resultado
         '
-        Me.p2.Location = New System.Drawing.Point(6, 168)
-        Me.p2.Name = "p2"
-        Me.p2.Size = New System.Drawing.Size(149, 20)
-        Me.p2.TabIndex = 17
+        Me.resultado.Location = New System.Drawing.Point(6, 168)
+        Me.resultado.Name = "resultado"
+        Me.resultado.Size = New System.Drawing.Size(149, 20)
+        Me.resultado.TabIndex = 17
         '
         'Label2
         '
@@ -230,7 +230,7 @@ Partial Class producto_cartesiano
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents p2 As TextBox
+    Friend WithEvents resultado As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents p As TextBox
     Friend WithEvents p1 As TextBox

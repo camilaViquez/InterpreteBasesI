@@ -171,6 +171,7 @@ Module Module1
 
 
         Catch ex As Exception
+<<<<<<< HEAD
 
             MessageBox.Show("ERROR AL COMPROBAR LA EXISTENCIA DE LA TABLA")
 
@@ -181,6 +182,18 @@ Module Module1
 
         Return aux
 
+=======
+
+            MessageBox.Show("ERROR AL COMPROBAR LA EXISTENCIA DE LA TABLA")
+
+        End Try
+        dr.Close()
+        cmd.Dispose()
+
+
+        Return aux
+
+>>>>>>> ec7df502e11f417ba453f9cbbc7bc48357161b51
     End Function
     Function cantidadTablasEnBD() As Integer
         Dim valor As Integer
