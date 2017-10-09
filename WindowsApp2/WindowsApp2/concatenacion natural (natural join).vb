@@ -5,11 +5,13 @@
     Public nombre_tabla1
     Public Nombre_tabla2
 
+
     Private Sub Algebra_Relacional_Enter(sender As Object, e As EventArgs) Handles Algebra_Relacional.Enter
+
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
         nombre_tabla1 = T1.Text
         Nombre_tabla2 = T2.Text
@@ -94,7 +96,7 @@
             Debug.WriteLine(pred)
             '  Debug.WriteLine(r1(contAux).ToString + " cont " + contAux.ToString)
             If (r1(contAux) <> "" And contAux = 0) Then
-                pred = pred + nombre_tabla1 + "." + r1(contAux) + " = " +Nombre_tabla2  + "." + r1(contAux) 
+                pred = pred + nombre_tabla1 + "." + r1(contAux) + " = " + Nombre_tabla2 + "." + r1(contAux)
             End If
             If (r1(contAux) <> "" And contAux <> 0) Then
                 pred = pred + " = "
@@ -228,4 +230,7 @@
 
 
     End Sub
+
+
+
 End Class

@@ -4,7 +4,7 @@ Imports System.Data.Sql
 
 
 
-
+'Modulo
 
 Module Module1
     Public cn As SqlConnection
@@ -19,7 +19,7 @@ Module Module1
 
     Sub abrirConexion()
         Try
-            cn = New SqlConnection("Data Source=LEO;Initial Catalog=Ventas;Integrated Security=True")
+            cn = New SqlConnection("Data Source=MATILDA;Initial Catalog=Ventas;Integrated Security=True")
             cn.Open()
 
             MessageBox.Show("Se realizó la conección con exito")
@@ -171,6 +171,7 @@ Module Module1
 
 
         Catch ex As Exception
+<<<<<<< HEAD
 
             MessageBox.Show("ERROR AL COMPROBAR LA EXISTENCIA DE LA TABLA")
 
@@ -181,6 +182,18 @@ Module Module1
 
         Return aux
 
+=======
+
+            MessageBox.Show("ERROR AL COMPROBAR LA EXISTENCIA DE LA TABLA")
+
+        End Try
+        dr.Close()
+        cmd.Dispose()
+
+
+        Return aux
+
+>>>>>>> ec7df502e11f417ba453f9cbbc7bc48357161b51
     End Function
     Function cantidadTablasEnBD() As Integer
         Dim valor As Integer

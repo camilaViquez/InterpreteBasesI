@@ -25,12 +25,12 @@ Partial Class concatenacion_natural__natural_join_
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.Algebra_label = New System.Windows.Forms.Label()
+        Me.SQL_Label = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.Algebra_Relacional = New System.Windows.Forms.GroupBox()
-        Me.Algebra_label = New System.Windows.Forms.Label()
         Me.Consulta_SQL = New System.Windows.Forms.GroupBox()
-        Me.SQL_Label = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -44,13 +44,33 @@ Partial Class concatenacion_natural__natural_join_
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
+        'Algebra_label
+        '
+        Me.Algebra_label.AutoSize = True
+        Me.Algebra_label.Location = New System.Drawing.Point(40, 459)
+        Me.Algebra_label.MaximumSize = New System.Drawing.Size(388, 80)
+        Me.Algebra_label.MinimumSize = New System.Drawing.Size(3, 5)
+        Me.Algebra_label.Name = "Algebra_label"
+        Me.Algebra_label.Size = New System.Drawing.Size(3, 13)
+        Me.Algebra_label.TabIndex = 28
+        '
+        'SQL_Label
+        '
+        Me.SQL_Label.AutoSize = True
+        Me.SQL_Label.Location = New System.Drawing.Point(40, 364)
+        Me.SQL_Label.MaximumSize = New System.Drawing.Size(388, 80)
+        Me.SQL_Label.MinimumSize = New System.Drawing.Size(3, 5)
+        Me.SQL_Label.Name = "SQL_Label"
+        Me.SQL_Label.Size = New System.Drawing.Size(3, 13)
+        Me.SQL_Label.TabIndex = 27
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.DataGridView2)
-        Me.GroupBox2.Location = New System.Drawing.Point(268, 23)
+        Me.GroupBox2.Location = New System.Drawing.Point(268, 29)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(322, 258)
-        Me.GroupBox2.TabIndex = 26
+        Me.GroupBox2.TabIndex = 33
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Resultado"
         '
@@ -90,6 +110,7 @@ Partial Class concatenacion_natural__natural_join_
         '
         'Algebra_Relacional
         '
+<<<<<<< HEAD
         Me.Algebra_Relacional.Location = New System.Drawing.Point(34, 409)
         Me.Algebra_Relacional.Name = "Algebra_Relacional"
         Me.Algebra_Relacional.Size = New System.Drawing.Size(111, 22)
@@ -126,6 +147,24 @@ Partial Class concatenacion_natural__natural_join_
         Me.SQL_Label.Size = New System.Drawing.Size(3, 13)
         Me.SQL_Label.TabIndex = 7
         '
+=======
+        Me.Algebra_Relacional.Location = New System.Drawing.Point(34, 415)
+        Me.Algebra_Relacional.Name = "Algebra_Relacional"
+        Me.Algebra_Relacional.Size = New System.Drawing.Size(111, 22)
+        Me.Algebra_Relacional.TabIndex = 32
+        Me.Algebra_Relacional.TabStop = False
+        Me.Algebra_Relacional.Text = "Algebra Relacional"
+        '
+        'Consulta_SQL
+        '
+        Me.Consulta_SQL.Location = New System.Drawing.Point(34, 325)
+        Me.Consulta_SQL.Name = "Consulta_SQL"
+        Me.Consulta_SQL.Size = New System.Drawing.Size(111, 34)
+        Me.Consulta_SQL.TabIndex = 31
+        Me.Consulta_SQL.TabStop = False
+        Me.Consulta_SQL.Text = "Consulta_SQL"
+        '
+>>>>>>> ec7df502e11f417ba453f9cbbc7bc48357161b51
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Label1)
@@ -134,10 +173,14 @@ Partial Class concatenacion_natural__natural_join_
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.T1)
         Me.GroupBox1.Controls.Add(Me.T2)
+<<<<<<< HEAD
         Me.GroupBox1.Location = New System.Drawing.Point(34, 23)
+=======
+        Me.GroupBox1.Location = New System.Drawing.Point(34, 29)
+>>>>>>> ec7df502e11f417ba453f9cbbc7bc48357161b51
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(181, 231)
-        Me.GroupBox1.TabIndex = 23
+        Me.GroupBox1.TabIndex = 30
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos"
         '
@@ -191,10 +234,10 @@ Partial Class concatenacion_natural__natural_join_
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(425, 348)
+        Me.Button1.Location = New System.Drawing.Point(425, 354)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 22
+        Me.Button1.TabIndex = 29
         Me.Button1.Text = "Consultar"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -221,12 +264,12 @@ Partial Class concatenacion_natural__natural_join_
 
     End Sub
 
+    Friend WithEvents Algebra_label As Label
+    Friend WithEvents SQL_Label As Label
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents Algebra_Relacional As GroupBox
-    Friend WithEvents Algebra_label As Label
     Friend WithEvents Consulta_SQL As GroupBox
-    Friend WithEvents SQL_Label As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
