@@ -6,7 +6,7 @@
     Public nuevo_nombre
     Public valores
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        nombre_tabla1 = Nombre_Tabla.Text
+        nombre_tabla1 = nombre_tabla.Text
         Dim existe, existeT As Boolean
         operacionR = operaciones.Text
         nuevo_nombre = resultado.Text
